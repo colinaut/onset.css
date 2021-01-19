@@ -1,0 +1,12 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Onset CSS                                 */
+/*     A simple relatively unopinionated classless css using css variables    */
+/*                        by Colin Fahrion @colinaut                          */
+/* -------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Yanone+Kaffeesatz&display=swap");
+
+@import './partials/variables.css';
+@import './partials/base.css';
+@import './partials/util.css';
+@import './partials/layout.css';

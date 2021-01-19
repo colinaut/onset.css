@@ -1,0 +1,81 @@
+/* -------------------------------------------------------------------------- */
+/*                              Global Root Variables                         */
+/* -------------------------------------------------------------------------- */
+
+:root {
+
+    /* --------------------------------- Colors --------------------------------- */
+
+    /* Neutral Palette */
+    --black: #000;
+    --white: #fff;
+    --lighter-gray: #efefef;
+    --light-gray: #d1d3d3;
+    --gray: #b4b9bf;
+    --dark-gray: #939393;
+    --darker-gray: #666;
+    --darkest-gray: #313438;
+
+    /* Selected Colors */
+    --primary: hsl(184, 72%, 42%);
+    --primary-light: hsl(177, 86%, 77%);
+    --primary-lighter: hsl(178, 100%, 94%);
+    --secondary: hsl(46, 58%, 52%);
+    --secondary-light: hsl(46, 74%, 85%);
+    --secondary-lighter: hsl(60, 69%, 97%);
+    --highlight: rgb(203, 55, 248);
+    --success: rgb(104, 231, 65);
+    --danger: rgb(231, 65, 65);
+
+    /* ------------------------------- Typography ------------------------------- */
+
+    --leading-normal: 1.4;
+    --leading-tight: 1.1;
+    --font-body: 'Open Sans', sans-serif;
+    --font-display: 'Yanone Kaffeesatz', sans-serif;
+    --font-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    --text-body-color: var(--black);
+    --text-header-color: var(--black);
+
+    /* ------------------------------- Type scale ------------------------------- */
+
+    --text-scale: 1.25;
+    --text-xs: calc(var(--text-sm) / var(--text-scale));
+    --text-sm: calc(var(--text-base) / var(--text-scale));
+    --text-base: 1rem;
+    --text-md: calc(var(--text-base) * var(--text-scale));
+    --text-lg: calc(var(--text-md) * var(--text-scale));
+    --text-xl: calc(var(--text-lg) * var(--text-scale));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale));
+    --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale));
+
+    /* ----------------- Regular spacing for padding and margin ----------------- */
+
+    --space-scale: 1.618;
+    --space-xxs: calc(var(--space-xs) / var(--space-scale));
+    --space-xs: calc(var(--space-sm) / var(--space-scale));
+    --space-sm: calc(var(--space) / var(--space-scale));
+    --space: .9rem;
+    --space-md: calc(var(--space) * var(--space-scale));
+    --space-lg: calc(var(--space-md) * var(--space-scale));
+    --space-xl: calc(var(--space-lg) * var(--space-scale));
+
+    /* -------------------------------- Box Specs ------------------------------- */
+    --border-radius: 0.2rem;
+    --border-radius-md: 0.5rem;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    /* --------------------------------- Layout --------------------------------- */
+    --max-content-width: 40rem;
+    --max-hero-width: 60rem;
+
+}
+
+@media (min-width: 64rem) {
+    :root {
+        --text-base: 1.25rem;
+    }
+}

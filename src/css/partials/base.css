@@ -1,0 +1,412 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Elements                                  */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Box Sizing ------------------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------- Body ---------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------- Typography ------------------------------- */
+
+html {
+    font-size: var(--text-base);
+}
+
+body {
+    font-family: var(--font-body);
+	line-height: var(--leading);
+    color: var(--text-body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: var(--space) 0;
+    font-weight: 400;
+    color: var(--text-header-color);
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+}
+
+.text-bigger {
+    font-size: var(--text-xxxxl);
+}
+
+.text-big {
+    font-size: var(--text-xxxl);
+}
+
+h1, .h1 {
+    font-size: var(--text-xxl);
+}
+
+h2, .h2 {
+    font-size: var(--text-xl);
+}
+
+h3, .h3 {
+    font-size: var(--text-lg);
+}
+
+h4, .h4 {
+    font-size: var(--text-md);
+}
+
+h5, .h5 {
+    font-size: var(--text-base);
+    font-weight: 700;
+}
+
+h6, .h6 {
+    font-size: var(--text-sm);
+    font-weight: 700;
+}
+
+.text-base {
+    font-size: var(--text-base);
+}
+
+small,
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Misc Content Elements                               */
+/* -------------------------------------------------------------------------- */
+
+p {
+    margin: var(--space) 0;
+}
+
+p>*:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 1px solid var(--light-gray);
+    padding: 0 var(--space);
+    margin: var(--space) 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+small {
+    font-size: var(--text-sm);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin: var(--space) 0;
+    background: var(--light-gray);
+}
+
+code,
+pre {
+    font-family: var(--font-monospace);
+    color: var(--darkest-gray);
+    background-color: var(--lighter-gray);
+    font-size: var(--text-sm);
+    vertical-align: middle;
+    overflow: scroll;
+    border-radius: var(--border-radius);
+}
+
+code {
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: 0 var(--space-sm);
+}
+
+pre {
+    white-space: pre;
+    margin: var(--space-sm) 0;
+    padding: var(--space-sm) var(--space);
+}
+
+pre::after {
+    content: ' ';
+}
+
+kbd {
+    display: inline-block;
+    padding: 0 var(--space-xs);
+    font-family: var(--font-monospace);
+    font-size: var(--text-sm);
+    color: var(--darkest-gray);
+    vertical-align: middle;
+    background-color:var(--lighter-gray);
+    border: solid 1px var(--light-gray);
+    border-bottom: solid 2px var(--dark-gray);
+    border-radius: 5px;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: 2px dashed var(--dark-gray);
+}
+
+@media (hover: hover) {
+
+    abbr:hover {
+        cursor: help;
+    }
+}
+
+address {
+    font-style: inherit;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Figures & Images                              */
+/* -------------------------------------------------------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: var(--space);
+}
+
+figcaption {
+    padding: var(--space-sm);
+    color: var(--darkdark-gray);
+    font-size: var(--text-sm);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Tables & Lists                               */
+/* -------------------------------------------------------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+    font-variant-numeric: tabular-nums;
+}
+
+caption {
+    font-style: italic;
+}
+
+th,
+td {
+    vertical-align: top;
+    border-bottom: 2px solid var(--light-gray);
+    padding: var(--space);
+}
+
+th {
+    font-weight: bold;
+    text-align: left;
+    color: var(--darkest-gray);
+}
+
+ul {
+    list-style: disc outside;
+    font-variant-numeric: tabular-nums;
+}
+
+ol {
+    list-style: decimal outside;
+}
+
+ol,
+ul {
+    margin: var(--space) 0;
+    padding: 0 0 0 var(--space-lg);
+}
+
+li {
+    margin: 0 0 var(--space-xs);
+}
+li:last-child {
+    margin-bottom: 0;
+}
+
+li > ul, li > ol {
+    margin-bottom: 0;
+}
+
+dl {
+    margin: var(--space-md) 0;
+}
+
+dt {
+    font-size: var(--text-md);
+    margin-bottom: var(--space-xxs);
+}
+
+dd {
+    font-size: var(--text-base);
+    margin: 0 var(--space) var(--space) 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Forms & Buttons                              */
+/* -------------------------------------------------------------------------- */
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+label,
+legend {
+    display: inline-block;
+}
+
+input[type='email'],
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input:not([type]) {
+    display: block;
+    padding: var(--space-sm);
+    margin: var(--space-sm) 0;
+    font-size: var(--text-base);
+    border: 2px solid var(--lighter-gray);
+    color: var(--black);
+    appearance: none;
+    border-radius: var(--border-radius);
+    background-color: var(--lighter-gray);
+}
+
+select {
+    display: block;
+    padding: var(--space-sm);
+    font-size: var(--text-base);
+    border: 2px solid var(--lighter-gray);
+    border-radius: var(--border-radius);
+    color: var(--black);
+    background-color: var(--lighter-gray);
+    appearance: none;
+}
+
+textarea {
+    display: block;
+    font-size: var(--text-base);
+    padding: var(--space-sm);
+    line-height: var(--leading-normal);
+    color: var(--black);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--lighter-gray);
+    background-color: var(--lighter-gray);
+    box-sizing: border-box;
+    resize: none;
+    appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 2px solid var(--danger);
+    outline: none;
+}
+
+input[type='checkbox']:hover,
+input[type='radio']:hover {
+    cursor: pointer;
+}
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button {
+    --button-color: var(--secondary);
+    --button-active-color: var(--primary);
+    --button-text-size: inherit;
+    --button-text-color: var(--white);
+    --button-active-text-color: var(--white);
+    --button-shadow: var(--shadow-md);
+    --button-active-shadow: var(--shadow);
+    padding: var(--space-sm) var(--space);
+    margin-bottom: var(--space-sm);
+    border: 0;
+    font-size: var(--button-text-size);
+    border-radius: var(--border-radius, 0.2rem);
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    font-weight: 700;
+    letter-spacing: var(--leading-tight);
+    box-shadow: var(--button-shadow);
+    outline: none;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    input[type='reset']:hover,
+    input[type='submit']:hover,
+    input[type='button']:hover,
+    button:hover {
+        --button-color: var(--button-active-color);
+        --button-shadow: var(--button-active-shadow);
+        --button-text-color: var(--button-active-text-color);
+    }
+}
+
+button:focus-visible,
+input[type='submit']:focus-visible,
+input[type='reset']:focus-visible,
+input[type='button']:focus-visible {
+    --button-color: var(--button-active-color);
+    --button-shadow: var(--button-active-shadow);
+    --button-text-color: var(--button-active-text-color);
+    outline: none;
+}
+
+input[disabled],
+button:disabled {
+    background-color: var(--darker-gray);
+}
