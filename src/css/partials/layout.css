@@ -1,0 +1,50 @@
+.onset-grid {
+    --grid-main-width: var(--max-content-width, 40rem);
+    --grid-max-width: var(--max-hero-width, 60rem);
+    --gap: var(--space-sm);
+    --cols: 12;
+    --col-width: calc(((var(--grid-main-width) - (var(--gap) * (var(--cols) - 1))) / var(--cols)));
+    max-width: var(--grid-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: [start] minmax(0, 1fr) [main-start] repeat(12, minmax(0, var(--col-width))) [main-end] minmax(0, 1fr) [end];
+    grid-column-gap: var(--gap);
+}
+
+.onset-grid-main, .onset-grid > * {
+    grid-column: main-start / main-end;
+}
+
+.onset-grid-full {
+    grid-column: start / end;
+}
+
+.onset-card {
+    --start: main-start;
+    --width: 4;
+    --bg: var(--light-gray);
+    grid-column: var(--start) / span var(--width);
+    background-color: var(--bg);
+    padding: var(--space-sm);
+    margin: var(--space) 0;
+}
+
+.onset-aside {
+    --start: start;
+    --width: 4;
+    --bg: var(--light-gray);
+    grid-column: var(--start) / span var(--width);
+    background-color: var(--bg);
+    padding: var(--space-sm);
+    margin: var(--space) 0;
+}
+
+.onset-main {
+    --start: 5;
+    --width: end;
+    --bg: var(--light-gray);
+    grid-column: var(--start) / span var(--width);
+    background-color: var(--bg);
+    padding: var(--space-sm);
+    margin: var(--space) 0;
+}

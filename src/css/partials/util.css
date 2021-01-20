@@ -1,0 +1,104 @@
+/* -------------------------------------------------------------------------- */
+/*                               Utility Classes                              */
+/*                        Optional basic utiliy classes                       */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------- Utility Class for Covering Elements ------------------ */
+
+.overlay-container {
+    display: grid;
+}
+
+.overlay {
+    grid-area: 1 / 1 / -1 / -1;
+}
+
+/* ------------------------ Layout Helpers ----------------------- */
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+/* modern clearing block */
+.flow-root {
+    display: flow-root;
+}
+
+/* oldschool clear-fix */
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Centers all inner content both vertical and horizontal using flex */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Basic grid, defaults to 2 column but can be easily changed with css variables */
+.grid {
+    --col: 1fr 1fr;
+    --row: auto;
+    display: grid;
+    grid-template: var(--col) / var(--row);
+}
+
+/* Basic flexbox, easily change justify content with css variables */
+.flex {
+    --justify: flex-start;
+    display: flex;
+    justify-content: var(--justify);
+}
+
+/* Global sections */
+.max-content-width {
+    max-width: var(--max-content-width);
+}
+
+.max-hero-width {
+    max-width: var(--max-hero-width);
+}
+
+.side-padding {
+    padding-right: var(--space-md);
+    padding-left: var(--space-md);
+}
+
+/* Popups */
+
+.hide {
+    display: none;
+}
+
+.popup {
+    --p: var(--space-md);
+    --bg: var(--white);
+    -s: var(--shadow);
+    z-index: var(--z-popup);
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: var(--p);
+    background: var(--bg);
+    box-shadow: var(--s);
+}
+
+.popup-backdrop {
+    --b: rgba(0, 0, 0, 0.7);
+    z-index: calc(var(--z-popup) - 1);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: var(--b);
+}
