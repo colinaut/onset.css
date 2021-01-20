@@ -72,6 +72,11 @@
     --max-content-width: 40rem;
     --max-hero-width: 60rem;
 
+    /* z-index for any floating or dropdown nav */
+    --z-nav: 100;
+    /* z-index for any popups. See util.css for example of this in use with backdrop using calc */
+    --z-popup: 200;
+
 }
 
 @media (min-width: 64rem) {

@@ -1,7 +1,7 @@
 // Example Configuration File
 module.exports = {
   plugins: [
-    // "@snowpack/plugin-postcss"
+    /* ... */
   ],
   packageOptions: {
     /* ... */

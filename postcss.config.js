@@ -4,15 +4,18 @@ const postcssEasyImport = require('postcss-easy-import');
 const importUrl = require('postcss-import-url');
 
 module.exports = {
-    plugins: [
+    plugins: process.env.NODE_ENV === 'development' ? [
         postcssEasyImport({
             path: ['src/css']
         }),
         importUrl(),
         postcssPresetEnv(),
-        cssnano({preset: ['default', {
-            discardComments: false,
-            normalizeWhitespace: false
-        }]}),
+    ] : [
+        postcssEasyImport({
+            path: ['src/css']
+        }),
+        importUrl(),
+        postcssPresetEnv(),
+        cssnano(),
     ],
 };

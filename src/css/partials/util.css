@@ -72,3 +72,33 @@
     padding-left: var(--space-md);
 }
 
+/* Popups */
+
+.hide {
+    display: none;
+}
+
+.popup {
+    --p: var(--space-md);
+    --bg: var(--white);
+    -s: var(--shadow);
+    z-index: var(--z-popup);
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: var(--p);
+    background: var(--bg);
+    box-shadow: var(--s);
+}
+
+.popup-backdrop {
+    --b: rgba(0, 0, 0, 0.7);
+    z-index: calc(var(--z-popup) - 1);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: var(--b);
+}
