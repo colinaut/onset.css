@@ -7,10 +7,9 @@
   "author": "Colin Fahrion",
   "license": "MIT",
   "scripts": {
-    "dist": "npx postcss src/css/onset.css -o dist/css/onset.css",
-    "watch": "npx postcss src/css/onset.css -o dist/css/onset.css -w",
-    "dev": "npx snowpack dev",
-    "build": "npx snowpack build"
+    "min": "npx postcss src/css/onset.css -o dist/css/onset.min.css --env production",
+    "build": "npx postcss src/css/onset.css -o dist/css/onset.css --env development",
+    "dev": "npx snowpack dev"
   },
   "devDependencies": {
     "@snowpack/plugin-postcss": "^1.0.11",
