@@ -39,6 +39,16 @@
 
     /* ------------------------------- Type scale ------------------------------- */
 
+    /* Fluid-Responsive Font-Size
+     * Minimum Font Size is 1rem (16px) and max is 1.25rem (20px)
+     * Scaling happens between the breakpoints 48rem and 120rem
+     * For how this works visit https://websemantics.uk/tools/responsive-font-calculator/
+     * Yeah I could have used a bunch of variables here but it seemed more complicated than it was worth.
+    */
+    font-size: clamp(1rem, calc(1rem + (1.25 - 1) * ((100vw - 48rem) / (120 - 48))), 1.25rem);
+    /* Safari Resize fix */
+    min-height: 0vw;
+
     --text-scale: 1.25;
     --text-xs: calc(var(--text-sm) / var(--text-scale));
     --text-sm: calc(var(--text-base) / var(--text-scale));
@@ -77,10 +87,4 @@
     /* z-index for any popups. See util.css for example of this in use with backdrop using calc */
     --z-popup: 200;
 
-}
-
-@media (min-width: 64rem) {
-    :root {
-        --text-base: 1.25rem;
-    }
 }
