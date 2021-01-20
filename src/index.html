@@ -31,6 +31,20 @@
       margin-bottom: var(--space-lg);
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var btn = document.querySelectorAll('.popup-btn');
+      var popup = document.querySelector('.popup');
+      var backdrop = document.querySelector('.popup-backdrop');
+
+      btn.forEach( b => {
+        b.addEventListener('click', function (event) {
+        popup.classList.toggle('hide');
+        backdrop.classList.toggle('hide');
+      });
+    });
+})
+  </script>
 </head>
 <!-- TODO: add simple smooth scroll so that it scrolls offset -->
 
@@ -40,7 +54,7 @@
       <h1>HTML5 Kitchen Sink</h1>
       <small>Jump to: <a href="#top">Top</a> | <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a
           href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a href="#embeds">Embeds</a> | <a
-          href="#forms">Forms</a> | <a href="#tables">Tables</a> | <a href="#layout">Grid Layout</a></small>
+          href="#forms">Forms</a> | <a href="#tables">Tables</a> | <a href="#layout">Util & Layout</a></small>
     </header>
     <section class="onset-grid-full hero">
       <img src="https://placeimg.com/2000/1400/any" />
@@ -697,8 +711,17 @@
     <main class="onset-main">
       <h2>Main with sidebar</h2>
     </main>
+    <div>
+      <h2>Popup</h2>
+      <button class="popup-btn">Display Popup</button>
+    </div>
     <footer role="contentinfo" class="onset-grid-full">
+      <p>Onset.css 2020 Created by Colin Fahrion <a href="https://twitter.com/colinaut">@colinaut</a></p>
     </footer>
+
   </div>
   <!-- END ONSET GRID -->
+  
+  <div class="hide popup"><h2>Popup</h2><button class="popup-btn">Close Popup</button></div>
+  <div class="hide popup-backdrop"></div>
 </body>

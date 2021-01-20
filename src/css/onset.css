@@ -6,7 +6,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Yanone+Kaffeesatz&display=swap");
 
+/* CSS Custom Properties Variables */
 @import './partials/variables.css';
+
+/* (mostly) classless css for all major elements */
 @import './partials/base.css';
+
+/* Optional simple utility classes */
 @import './partials/util.css';
+
+/* Optional Grid layout stuff */
 @import './partials/layout.css';
