@@ -45,16 +45,16 @@
     --highlight: rgb(203, 55, 248);
     --success: rgb(104, 231, 65);
     --danger: rgb(231, 65, 65);
+    --warning: rgb(250, 203, 74);
 
     /* ------------------------------- Typography ------------------------------- */
 
-    --leading-normal: 1.4;
-    --leading-tight: 1.1;
+    --leading-normal: 1.45;
+    --leading-tight: 1.15;
     --font-body: 'Open Sans', sans-serif;
     --font-display: 'Yanone Kaffeesatz', sans-serif;
     --font-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     --text-body-color: var(--black);
-    --text-header-color: var(--black);
 
     /* ------------------------------- Type scale ------------------------------- */
 
@@ -89,6 +89,7 @@
     --space-md: calc(var(--space) * var(--space-scale));
     --space-lg: calc(var(--space-md) * var(--space-scale));
     --space-xl: calc(var(--space-lg) * var(--space-scale));
+    --space-xxl: calc(var(--space-xl) * var(--space-scale));
 
     /* -------------------------------- Box Specs ------------------------------- */
     --border-radius: 0.2rem;
@@ -98,7 +99,7 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
     /* --------------------------------- Layout --------------------------------- */
-    --max-content-width: 40rem;
+    --max-content-width: 44rem;
     --max-hero-width: 60rem;
 
     /* z-index for any floating or dropdown nav */
@@ -124,7 +125,8 @@ body {
 body {
     font-family: 'Open Sans', sans-serif;
     font-family: var(--font-body);
-	line-height: var(--leading);
+	line-height: 1.45;
+	line-height: var(--leading-normal);
     color: #000;
     color: var(--text-body-color);
 }
@@ -137,8 +139,6 @@ h6 {
     margin: .9rem 0;
     margin: var(--space) 0;
     font-weight: 400;
-    color: #000;
-    color: var(--text-header-color);
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
     margin-top: 0;
@@ -453,7 +453,7 @@ textarea {
     font-size: var(--text-base);
     padding: calc(.9rem / 1.618);
     padding: var(--space-sm);
-    line-height: 1.4;
+    line-height: 1.45;
     line-height: var(--leading-normal);
     color: #000;
     color: var(--black);
@@ -509,7 +509,7 @@ button {
     color: var(--button-text-color);
     background-color: var(--button-color);
     font-weight: 700;
-    letter-spacing: 1.1;
+    letter-spacing: 1.15;
     letter-spacing: var(--leading-tight);
     box-shadow: var(--button-shadow);
     outline: none;
@@ -599,12 +599,14 @@ button:disabled {
 }
 /* Global sections */
 .max-content-width {
-    max-width: 40rem;
+    max-width: 44rem;
     max-width: var(--max-content-width);
+    margin: 0 auto;
 }
 .max-hero-width {
     max-width: 60rem;
     max-width: var(--max-hero-width);
+    margin: 0 auto;
 }
 .side-padding {
     padding-right: calc(.9rem * 1.618);

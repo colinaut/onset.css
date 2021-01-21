@@ -61,10 +61,12 @@
 /* Global sections */
 .max-content-width {
     max-width: var(--max-content-width);
+    margin: 0 auto;
 }
 
 .max-hero-width {
     max-width: var(--max-hero-width);
+    margin: 0 auto;
 }
 
 .side-padding {

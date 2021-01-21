@@ -19,7 +19,7 @@ body {
 
 body {
     font-family: var(--font-body);
-	line-height: var(--leading);
+	line-height: var(--leading-normal);
     color: var(--text-body-color);
 }
 
@@ -31,7 +31,6 @@ h5,
 h6 {
     margin: var(--space) 0;
     font-weight: 400;
-    color: var(--text-header-color);
 }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
