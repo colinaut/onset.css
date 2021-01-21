@@ -11,11 +11,11 @@ This is designed to function as a base style "normalizer" with css variables for
 ## Features
 
 - Lightweight
-  – Fluid-responsive typography and rem spacing for padding and margin
-  – CSS variables for consistant styling throughout your site
-  — Color system
-  – Visual type scale - Rem spacing for padding and margin
-  – Other useful CSS variables: box shadows, border-radius, z-index levels, max-widths
+- Fluid-responsive typography and rem spacing for padding and margin
+  * CSS variables for consistant styling throughout your site
+  * Color system
+  * Visual type scale - Rem spacing for padding and margin
+  * Other useful CSS variables: box shadows, border-radius, z-index levels, max-widths
 - Base css for typography, html element styles, and forms
 - Optional basic utility classes
   – Optional layout classes
